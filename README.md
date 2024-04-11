@@ -9,6 +9,7 @@ To use this service, you must install the following dependencies:
 
 ```bash
 pip install fastapi uvicorn torch torchvision faiss-cpu numpy opencv-python-headless pandas requests Pillow
+```
 
 Additionally, the pretrained DINOv2 model will be automatically downloaded upon the first run.
 
@@ -18,6 +19,7 @@ Use the following command to start the server:
 
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 883
+```
 
 After launching, the service will be available at http://localhost:883.
 
@@ -39,6 +41,7 @@ curl -X 'POST' \
   "image_path": "path_to_image",
   "num_similar": 4
 }'
+```
 
 The service will respond with a JSON containing paths to similar images.
 
